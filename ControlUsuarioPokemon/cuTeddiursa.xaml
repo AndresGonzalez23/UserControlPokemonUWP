@@ -109,15 +109,15 @@
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="btnMordisco" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="btnMordisco" Storyboard.TargetProperty="(Control.IsEnabled)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000">
                     <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
+                        <x:Boolean>False</x:Boolean>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
                 <DiscreteObjectKeyFrame KeyTime="00:00:01.8000000">
                     <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
+                        <x:Boolean>True</x:Boolean>
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
