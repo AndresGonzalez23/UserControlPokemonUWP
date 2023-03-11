@@ -28,5 +28,7 @@ namespace ControlUsuarioPokemon
             this.MiTeddiursa.Vida = 80.0;
             MiTeddiursa.verFondo(false);
         }
+
+        ///Hola que tal
     }
 }
