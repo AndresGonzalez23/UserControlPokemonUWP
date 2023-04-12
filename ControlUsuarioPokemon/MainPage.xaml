@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="White">
-        <local:cuTeddiursa x:Name="MiTeddiursa" HorizontalAlignment="Center" VerticalAlignment="Center" Height="684" Width="1015"/>
-
+        <local:cuOshawott x:Name="miOshawott" HorizontalAlignment="Left" Margin="631,68,0,0" VerticalAlignment="Top" Height="363" Width="503"/>
+        <local:cuTeddiursa x:Name="miTeddiursa" HorizontalAlignment="Left" Margin="59,51,0,0" VerticalAlignment="Top" Height="380" Width="510"/>
+        <local:cuCharmander x:Name="miCharmander" HorizontalAlignment="Center" Margin="0,500,0,0" VerticalAlignment="Top" Height="412" Width="533"/>
     </Grid>
 </Page>

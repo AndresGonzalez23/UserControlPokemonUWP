@@ -119,6 +119,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="cuCharmander.xaml.cs">
+      <DependentUpon>cuCharmander.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cuOshawott.xaml.cs">
+      <DependentUpon>cuOshawott.xaml</DependentUpon>
+    </Compile>
     <Compile Include="cuTeddiursa.xaml.cs">
       <DependentUpon>cuTeddiursa.xaml</DependentUpon>
     </Compile>
@@ -133,13 +139,32 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bolafuego.png" />
+    <Content Include="Assets\bolafuego1.png" />
+    <Content Include="Assets\bos.png" />
     <Content Include="Assets\corazon.png" />
+    <Content Include="Assets\Corazonlaura.png" />
+    <Content Include="Assets\Corazón.svg.png" />
+    <Content Include="Assets\dormir_accion.png" />
     <Content Include="Assets\elixir.png" />
     <Content Include="Assets\energia.png" />
     <Content Include="Assets\escudo.png" />
     <Content Include="Assets\fondoBosque.png" />
+    <Content Include="Assets\lanza.png" />
+    <Content Include="Assets\lanza1.png" />
     <Content Include="Assets\letra-z.png" />
+    <Content Include="Assets\llamarada.png" />
+    <Content Include="Assets\playa.png" />
+    <Content Include="Assets\pocima_amarilla.png" />
+    <Content Include="Assets\pocima_roja.png" />
     <Content Include="Assets\pocion.png" />
+    <Content Include="Assets\pocion_amarillaLaura.png" />
+    <Content Include="Assets\Pocion_EnergiaLaura.png" />
+    <Content Include="Assets\pocion_rojaLaura.png" />
+    <Content Include="Assets\Pocion_SaludLaura.png" />
+    <Content Include="Assets\protege.png" />
+    <Content Include="Assets\rayo.png" />
+    <Content Include="Assets\RayoEnergia.png" />
     <Content Include="Assets\sudar.png" />
     <Content Include="Assets\tirita.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -156,6 +181,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="cuCharmander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="cuOshawott.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="cuTeddiursa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

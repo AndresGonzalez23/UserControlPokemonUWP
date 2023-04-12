@@ -25,8 +25,12 @@ namespace ControlUsuarioPokemon
         public MainPage()
         {
             this.InitializeComponent();
-            this.MiTeddiursa.Vida = 80.0;
-            MiTeddiursa.verFondo(true);
+            this.miTeddiursa.Vida = 80.0;
+            miTeddiursa.verFondo(true);
+            this.miOshawott.Vida = 80.0;
+            this.miCharmander.Vida = 70.0;
+
+
         }
 
         ///Hola que tal
