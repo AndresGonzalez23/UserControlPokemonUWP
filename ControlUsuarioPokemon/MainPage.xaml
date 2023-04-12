@@ -9,8 +9,51 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="White">
-        <local:cuOshawott x:Name="miOshawott" HorizontalAlignment="Left" Margin="631,68,0,0" VerticalAlignment="Top" Height="363" Width="503"/>
-        <local:cuTeddiursa x:Name="miTeddiursa" HorizontalAlignment="Left" Margin="59,51,0,0" VerticalAlignment="Top" Height="380" Width="510"/>
-        <local:cuCharmander x:Name="miCharmander" HorizontalAlignment="Center" Margin="0,500,0,0" VerticalAlignment="Top" Height="412" Width="533"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="White" Margin="0,0,255,0">
+            <Button x:Name="btn_DesplegarSplit" Margin="4,0,0,0" Width="34" Background="#FF7E7676" Click="Button_Click">
+                <FontIcon Foreground="White" Glyph="&#xE700;" FontFamily="Segoe MDL2 Assets" />
+            </Button>
+        </Border>
+
+        <SplitView x:Name="sView" Grid.Row="1" Grid.ColumnSpan="2" IsPaneOpen="True" DisplayMode="CompactInline" CompactPaneLength="50" PaneBackground="White">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <SymbolIcon Grid.Row="0" Margin="4" Symbol="Home" FocusVisualPrimaryBrush="Black" Foreground="Black"></SymbolIcon>
+                    <SymbolIcon Grid.Row="1" Margin="4" Symbol="Pictures" FocusVisualPrimaryBrush="Black" Foreground="Black"></SymbolIcon>
+                    <SymbolIcon Grid.Row="2" Margin="4" Symbol="People" FocusVisualPrimaryBrush="Black" Foreground="Black"></SymbolIcon>
+                    <SymbolIcon Grid.Row="3" Margin="4" Symbol="Camera" Foreground="Black" FocusVisualPrimaryBrush="Black"></SymbolIcon>
+
+                    <Button x:Name="btnInicio" Grid.Row="0" Grid.Column="1" Content="Inicio" Background="#333F2525" Click="btnInicio_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                    <Button x:Name="btnPokedex" Grid.Row="1" Grid.Column="1" Content="Pokedex" Background="#333F2525" Click="btnPokedex_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                    <Button x:Name="btnCombate" Grid.Row="2" Grid.Column="1" Content="Combate" Background="#333F2525" Click="btnCombate_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                    <Button x:Name="btnAcercaDe" Grid.Row="3" Grid.Column="1" Content="Acerca de" Background="#333F2525" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+
+                </Grid>
+            </SplitView.Pane>
+            <Frame x:Name="frMain" Grid.Column="1" Grid.Row="1" Foreground="Black">
+                <Grid>
+                    
+                </Grid>
+            </Frame>
+        </SplitView>
     </Grid>
 </Page>

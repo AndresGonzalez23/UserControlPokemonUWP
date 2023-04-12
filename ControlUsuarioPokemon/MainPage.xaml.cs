@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,14 +27,60 @@ namespace ControlUsuarioPokemon
         public MainPage()
         {
             this.InitializeComponent();
-            this.miTeddiursa.Vida = 80.0;
-            miTeddiursa.verFondo(true);
-            this.miOshawott.Vida = 80.0;
-            this.miCharmander.Vida = 70.0;
-
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            SystemNavigationManager.GetForCurrentView().BackRequested += opcionVolver;
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(320, 320));
+            ApplicationView.GetForCurrentView().VisibleBoundsChanged += MainPage_VisibleBoundsChanged;
 
         }
 
-        ///Hola que tal
+        private void MainPage_VisibleBoundsChanged(ApplicationView sender, object args)
+        {
+            var Width = ApplicationView.GetForCurrentView().VisibleBounds.Width;
+            if (Width >= 720)
+            {
+                sView.DisplayMode = SplitViewDisplayMode.CompactInline;
+                sView.IsPaneOpen = true;
+            }
+            else if (Width >= 360)
+            {
+                sView.DisplayMode = SplitViewDisplayMode.CompactOverlay;
+                sView.IsPaneOpen = false;
+            }
+            else
+            {
+                sView.DisplayMode = SplitViewDisplayMode.Overlay;
+                sView.IsPaneOpen = false;
+            }
+
+        }
+
+        private void btnInicio_Click(object sender, RoutedEventArgs e)
+        {
+            frMain.Navigate(typeof(MainPage));
+        }
+
+        private void btnPokedex_Click(object sender, RoutedEventArgs e)
+        {
+            frMain.Navigate(typeof(PokedexPage));
+
+        }
+
+        private void btnCombate_Click(object sender, RoutedEventArgs e)
+        {
+            frMain.Navigate(typeof(CombatePage));
+        }
+
+        private void opcionVolver(object sender, BackRequestedEventArgs e)
+        {
+            if (frMain.BackStack.Any())
+            {
+                frMain.GoBack();
+            }
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            sView.IsPaneOpen = !sView.IsPaneOpen;
+        }
     }
 }
