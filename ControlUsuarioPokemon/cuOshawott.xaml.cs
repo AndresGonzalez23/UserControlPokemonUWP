@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Control de usuario está documentada en https://go.microsoft.com/fwlink/?LinkId=234236
@@ -62,8 +63,14 @@ namespace ControlUsuarioPokemon
             set { this.pbPower.Value = value; }
         }
 
-
-
+        public void verFondo(bool verFondo)
+        {
+            if (!verFondo) { this.imgFondo.Source = null; }
+            else
+            {
+                this.imgFondo.Source = new BitmapImage(new Uri("ms-appx:///Assets/playa.png"));
+            }
+        }
         private void usePotionRed(object sender, PointerRoutedEventArgs e)
         {
             dtTime = new DispatcherTimer();

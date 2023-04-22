@@ -6,9 +6,25 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="White">
+    Background="Transparent">
+
 
     <Grid>
+        
+        <Viewbox VerticalAlignment="Bottom">
+            <Image Source="/Assets/PokedexFondo.png" VerticalAlignment="Bottom"/>
+        </Viewbox>
+
+        <Viewbox>
+            <GridView HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="/Assets/Teddiursa.png" Width="300" Margin="10,5,10,5"/>
+                <Image Source="/Assets/oshawott.png" Width="300" Margin="10,5,10,5"/>
+                <Image Source="/Assets/charmander.png" Width="300" Margin="10,5,10,5"/>
+            </GridView>
+        </Viewbox>
+        
+        
+
 
     </Grid>
 </Page>

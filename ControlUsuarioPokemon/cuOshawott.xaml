@@ -979,7 +979,7 @@
             <RowDefinition Height="70*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Assets/playa.png" Stretch="Fill" Grid.RowSpan="4" Grid.ColumnSpan="3" Height="990" Width="1490" RenderTransformOrigin="0.491,0.472" FocusVisualPrimaryBrush="White"/>
+        <Image x:Name="imgFondo" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Assets/playa.png" Stretch="Fill" Grid.RowSpan="4" Grid.ColumnSpan="3" Height="990" Width="1490" RenderTransformOrigin="0.491,0.472" FocusVisualPrimaryBrush="White"/>
 
         <ProgressBar x:Name="pbHealth" Grid.Column="1" HorizontalAlignment="Center" Width="1200" Height="96" Margin="2,2,2,2" Background="#66FF0000" BorderBrush="#FFFF0606" Foreground="Red" FocusVisualPrimaryBrush="Red" Value="80"/>
         <ProgressBar x:Name="pbPower" Grid.Column="1" HorizontalAlignment="Center" Height="100" Width="1200" Grid.Row="1" Value="60" Background="#66F1FF00" Foreground="#FFE6FF00"/>

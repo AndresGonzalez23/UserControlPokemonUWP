@@ -145,6 +145,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\charmander.png" />
+    <Content Include="Assets\oshawott.png" />
+    <Content Include="Assets\PokedexFondo.png" />
+    <Content Include="Assets\Teddiursa.png" />
     <Content Include="Assets\bolafuego.png" />
     <Content Include="Assets\bolafuego1.png" />
     <Content Include="Assets\bos.png" />
