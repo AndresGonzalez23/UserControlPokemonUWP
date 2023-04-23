@@ -219,5 +219,18 @@ namespace ControlUsuarioPokemon
             }
         }
 
+        private bool verVida = true;
+        public bool VerVida
+        {
+            get { return verVida; }
+            set
+            {
+                this.verVida = value;
+                if (!verVida) this.gridGeneral.RowDefinitions[0].Height = new GridLength(0);
+                else this.gridGeneral.RowDefinitions[0].Height = new GridLength(10,
+               GridUnitType.Star);
+            }
+        }
+
     }
 }

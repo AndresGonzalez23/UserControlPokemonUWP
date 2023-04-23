@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="ControlUsuarioPokemon.InfoPoke"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ControlUsuarioPokemon"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.RowSpan="3" Height="576">
+            <Image Source="/Assets/PokedexFondo.png" VerticalAlignment="Bottom"/>
+        </Viewbox>
+        <local:cuTeddiursa x:Name="cuTeddiursa" Grid.Row="1" Height="340" Width="310"/>
+
+
+    </Grid>
+</Page>

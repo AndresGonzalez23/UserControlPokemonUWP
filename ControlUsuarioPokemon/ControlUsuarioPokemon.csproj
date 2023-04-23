@@ -131,6 +131,9 @@
     <Compile Include="cuTeddiursa.xaml.cs">
       <DependentUpon>cuTeddiursa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InfoPoke.xaml.cs">
+      <DependentUpon>InfoPoke.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -204,6 +207,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="cuTeddiursa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoPoke.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
