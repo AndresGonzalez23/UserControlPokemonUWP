@@ -26,5 +26,35 @@ namespace ControlUsuarioPokemon
         {
             this.InitializeComponent();
         }
+
+        private void elegirOshawott1_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            this.combate_Oshawott1.Visibility = Visibility.Visible;
+        }
+
+        private void elegirCharmander1_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            this.combate_Charmander1.Visibility = Visibility.Visible;
+        }
+
+        private void elegirTeddiursa1_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            this.combate_Teddiursa1.Visibility = Visibility.Visible;
+        }
+
+        private void elegirOshawott2_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            this.combate_Oshawott2.Visibility = Visibility.Visible;
+        }
+
+        private void elegirCharmander2_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            this.combate_Charmander2.Visibility = Visibility.Visible;
+        }
+
+        private void elegirTeddiursa2_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            this.combate_Teddiursa2.Visibility = Visibility.Visible;
+        }
     }
 }
