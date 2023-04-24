@@ -6,9 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Transparent">
 
-    <Grid Background="White">
+    <Grid Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
@@ -18,15 +18,16 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Background="White" Margin="0,0,255,0">
-            <Button x:Name="btn_DesplegarSplit" Margin="4,0,0,0" Width="34" Background="#FF7E7676" Click="Button_Click">
-                <FontIcon Foreground="White" Glyph="&#xE700;" FontFamily="Segoe MDL2 Assets" />
-            </Button>
-        </Border>
+        <Image Grid.RowSpan="4" Grid.ColumnSpan="4" Source="/Assets/PokedexFondo.png" Stretch="UniformToFill"/>
 
-        <SplitView x:Name="sView" Grid.Row="1" Grid.ColumnSpan="2" IsPaneOpen="True" DisplayMode="CompactInline" CompactPaneLength="50" PaneBackground="White">
+        <Button x:Name="btn_DesplegarSplit" Margin="4,0,0,0" Width="34" Background="#FF7E7676" Click="Button_Click">
+            <FontIcon Foreground="White" Glyph="&#xE700;" FontFamily="Segoe MDL2 Assets" />
+        </Button>
+
+        <SplitView x:Name="sView" Grid.Row="1" Grid.ColumnSpan="2" IsPaneOpen="True" DisplayMode="CompactInline" CompactPaneLength="50" PaneBackground="Transparent">
             <SplitView.Pane>
                 <Grid>
+
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -49,11 +50,14 @@
 
                 </Grid>
             </SplitView.Pane>
+
             <Frame x:Name="frMain" Grid.Column="1" Grid.Row="1" Foreground="Black">
                 <Grid>
-                    
+
                 </Grid>
             </Frame>
         </SplitView>
+        
+
     </Grid>
 </Page>

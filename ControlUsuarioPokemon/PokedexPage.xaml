@@ -10,24 +10,22 @@
 
 
     <Grid>
-        <Frame x:Name="frInfo">
-            <Grid>
-                
-            </Grid>
-        </Frame>
         
-        <Viewbox VerticalAlignment="Bottom">
-            <Image Source="/Assets/PokedexFondo.png" VerticalAlignment="Bottom"/>
-        </Viewbox>
+        
 
         <Viewbox>
             <GridView HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image x:Name="img_Teddiursa" Source="/Assets/Teddiursa.png" Width="300" Margin="10,5,10,5"/>
+                <Image x:Name="img_Teddiursa" Source="/Assets/Teddiursa.png" Width="300" Margin="10,5,10,5" PointerReleased="img_Teddiursa_PointerReleased"/>
                 <Image Source="/Assets/oshawott.png" Width="300" Margin="10,5,10,5"/>
                 <Image Source="/Assets/charmander.png" Width="300" Margin="10,5,10,5"/>
             </GridView>
         </Viewbox>
-        
+
+            <Frame x:Name="frInfo">
+                <Grid>
+
+                </Grid>
+            </Frame>
 
     </Grid>
 </Page>

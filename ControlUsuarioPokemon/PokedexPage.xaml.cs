@@ -25,15 +25,25 @@ namespace ControlUsuarioPokemon
     /// </summary>
     public sealed partial class PokedexPage : Page
     {
-        public Page[] paginas;
-       
+        MainPage padre;
+
+
         public PokedexPage()
         {
             this.InitializeComponent();
-            paginas = new Page[] { new InfoPoke() };
+            
            
         }
 
-        
+        private void img_Teddiursa_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            padre.irAPagina("InfoPoke");
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            padre = (MainPage)e.Parameter;
+        }
+
     }
 }

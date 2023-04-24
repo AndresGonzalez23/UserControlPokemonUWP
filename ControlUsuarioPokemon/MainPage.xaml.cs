@@ -57,18 +57,18 @@ namespace ControlUsuarioPokemon
 
         private void btnInicio_Click(object sender, RoutedEventArgs e)
         {
-            frMain.Navigate(typeof(MainPage));
+            frMain.Navigate(typeof(MainPage), this);
         }
 
         private void btnPokedex_Click(object sender, RoutedEventArgs e)
         {
-            frMain.Navigate(typeof(PokedexPage));
+            frMain.Navigate(typeof(PokedexPage), this);
 
         }
 
         private void btnCombate_Click(object sender, RoutedEventArgs e)
         {
-            frMain.Navigate(typeof(CombatePage));
+            frMain.Navigate(typeof(CombatePage), this);
         }
 
         private void opcionVolver(object sender, BackRequestedEventArgs e)
@@ -82,5 +82,16 @@ namespace ControlUsuarioPokemon
         {
             sView.IsPaneOpen = !sView.IsPaneOpen;
         }
+
+        public void irAPagina(string nombrePagina)
+        {
+            switch (nombrePagina)
+            {
+                case "InfoPoke":
+                    frMain.Navigate(typeof(InfoPoke));
+                    break;
+            }
+        }
+
     }
 }
