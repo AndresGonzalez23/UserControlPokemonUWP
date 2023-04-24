@@ -18,9 +18,7 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="11*"/>
         </Grid.ColumnDefinitions>
-        <Viewbox VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.RowSpan="3" Height="576">
-            <Image Source="/Assets/PokedexFondo.png" VerticalAlignment="Bottom"/>
-        </Viewbox>
+        
         <local:cuTeddiursa x:Name="cuTeddiursa" Grid.Row="1" Height="340" Width="310"/>
 
 
