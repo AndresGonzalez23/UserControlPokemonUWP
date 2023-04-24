@@ -232,5 +232,35 @@ namespace ControlUsuarioPokemon
             }
         }
 
+        public void CambiarVisibilidadBotones()
+        {
+            btnAtaque.Visibility = Visibility.Collapsed;
+            btnDescanso.Visibility = Visibility.Collapsed; 
+            btnMordisco.Visibility = Visibility.Collapsed;
+            btnProteccion.Visibility = Visibility.Collapsed;
+            fndNombre.Visibility = Visibility.Collapsed;
+            txtNombre.Visibility = Visibility.Collapsed;
+        }
+
+        public void DesactivarCorrer(bool activar)
+        {
+            cvCuerpo.PointerReleased -= correr; // Desactiva el evento
+            if (activar)
+            {
+                cvCuerpo.PointerReleased += correr; // Activa el evento
+            }
+        }
+
+        public void DesactivarBrazos(bool activar)
+        {
+            elBrazoIzquierdo.PointerReleased -= tocarBrazoIzquierdo; // Desactiva el evento
+            elipseBrazoDerecho.PointerReleased-= tocarBrazoDerecho;
+            if (activar)
+            {
+                elBrazoIzquierdo.PointerReleased += tocarBrazoIzquierdo; // Activa el evento
+                elipseBrazoDerecho.PointerReleased += tocarBrazoDerecho;
+            }
+        }
+
     }
 }

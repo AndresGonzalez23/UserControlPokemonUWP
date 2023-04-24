@@ -28,7 +28,9 @@ namespace ControlUsuarioPokemon
             this.cuTeddiursa.verFondo(false);
             this.cuTeddiursa.VerEnergia = false;
             this.cuTeddiursa.VerVida = false;
-
+            this.cuTeddiursa.CambiarVisibilidadBotones();
+            this.cuTeddiursa.DesactivarCorrer(false);
+            this.cuTeddiursa.DesactivarBrazos(false);
         }
     }
 }
