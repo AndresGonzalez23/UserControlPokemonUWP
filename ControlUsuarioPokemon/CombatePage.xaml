@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="White">
+    Background="Transparent">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -20,18 +20,18 @@
         </Grid.RowDefinitions>
 
         <Image x:Name="imgFondo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="/Assets/fondo_combate.png" Grid.ColumnSpan="2" Margin="0,0,0,0" Stretch="Fill" Grid.Row="2"/>
-        <Image x:Name="elegirTeddiursa1" Source="/Assets/teddiursa pokedex.png" Grid.ColumnSpan="2" Margin="199,0,572,0" PointerReleased="elegirTeddiursa1_PointerReleased" />
-        <Image x:Name="elegirTeddiursa2" Source="/Assets/teddiursa pokedex.png" Margin="111,0,-69,0" Grid.Column="1" PointerReleased="elegirTeddiursa2_PointerReleased" />
+        <Image x:Name="elegirTeddiursa1" Source="/Assets/teddiursa pokedex.png" Grid.ColumnSpan="2" Margin="262,0,509,0" PointerReleased="elegirTeddiursa1_PointerReleased" />
+        <Image x:Name="elegirTeddiursa2" Source="/Assets/teddiursa pokedex.png" Margin="183,0,-141,0" Grid.Column="1" PointerReleased="elegirTeddiursa2_PointerReleased" />
         <Image x:Name="elegirOshawott1" Source="/Assets/oshawott pokedex.png" Margin="-154,0,154,0" PointerReleased="elegirOshawott1_PointerReleased" />
-        <Image x:Name="elegirOshawott2" Source="/Assets/oshawott pokedex.png" Margin="411,10,360,30" Grid.ColumnSpan="2" Grid.RowSpan="2" PointerReleased="elegirOshawott2_PointerReleased" />
-        <Image x:Name="elegirCharmander1" Source="/Assets/charmander pokedex.png" Grid.ColumnSpan="2" Margin="56,0,715,0" PointerReleased="elegirCharmander1_PointerReleased" />
-        <Image x:Name="elegirCharmander2" Source="/Assets/charmander pokedex.png" Margin="596,0,175,0" Grid.ColumnSpan="2" PointerReleased="elegirCharmander2_PointerReleased" />
-        <local:cuOshawott x:Name="combate_Oshawott1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="527" Width="617" Margin="0,116,0,0" Visibility="Collapsed"/>
-        <local:cuOshawott x:Name="combate_Oshawott2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="527" Width="617" Margin="0,116,0,0" Grid.Column="1" Visibility="Collapsed"/>
-        <local:cuTeddiursa x:Name="combate_Teddiursa1" HorizontalAlignment="Center" Margin="0,17,0,0" Grid.Row="2" VerticalAlignment="Top" Height="628" Width="584" Visibility="Collapsed"/>
-        <local:cuTeddiursa x:Name="combate_Teddiursa2" HorizontalAlignment="Left" Margin="134,17,0,0" Grid.Row="2" VerticalAlignment="Top" Height="628" Width="584" Grid.Column="1" Visibility="Collapsed"/>
-        <local:cuCharmander x:Name="combate_Charmander1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="663" Width="601" Margin="94,46,0,0" Visibility="Collapsed"/>
-        <local:cuCharmander x:Name="combate_Charmander2" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="663" Width="601" Margin="111,46,0,0" Grid.Column="1" Visibility="Collapsed"/>
+        <Image x:Name="elegirOshawott2" Source="/Assets/oshawott pokedex.png" Margin="456,0,315,4" Grid.ColumnSpan="2" PointerReleased="elegirOshawott2_PointerReleased" />
+        <Image x:Name="elegirCharmander1" Source="/Assets/charmander pokedex.png" PointerReleased="elegirCharmander1_PointerReleased" />
+        <Image x:Name="elegirCharmander2" Source="/Assets/charmander pokedex.png" Margin="136,0,137,0" PointerReleased="elegirCharmander2_PointerReleased" Grid.Column="1" />
+        <local:cuOshawott x:Name="combate_Oshawott1" Grid.Row="2" Height="453" HorizontalAlignment="Center" VerticalAlignment="Top" Width="430" Margin="0,20,0,0" Visibility="Collapsed"/>
+        <local:cuOshawott x:Name="combate_Oshawott2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="457" Width="443" Margin="0,19,0,0" Grid.Column="1" Visibility="Collapsed"/>
+        <local:cuTeddiursa x:Name="combate_Teddiursa1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="453" Width="453" Visibility="Collapsed"/>
+        <local:cuTeddiursa x:Name="combate_Teddiursa2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="453" Width="449" Grid.Column="1" Visibility="Collapsed"/>
+        <local:cuCharmander x:Name="combate_Charmander1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="498" Width="476" Visibility="Collapsed"/>
+        <local:cuCharmander x:Name="combate_Charmander2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="500" Width="478" Grid.Column="1" Visibility="Collapsed"/>
     </Grid>
 
 </Page>

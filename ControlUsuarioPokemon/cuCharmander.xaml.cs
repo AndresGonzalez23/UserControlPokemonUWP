@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Control de usuario está documentada en https://go.microsoft.com/fwlink/?LinkId=234236
@@ -38,7 +39,7 @@ namespace ControlUsuarioPokemon
             if (!verfondo) { this.imFondo.Source = null; }
             else
             {
-
+                this.imFondo.Source = new BitmapImage(new Uri("ms-appx:///Assets/bos.png"));
             }
         }
 

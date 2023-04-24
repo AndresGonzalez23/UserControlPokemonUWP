@@ -25,6 +25,12 @@ namespace ControlUsuarioPokemon
         public CombatePage()
         {
             this.InitializeComponent();
+            this.combate_Oshawott1.verFondo(false);
+            this.combate_Oshawott2.verFondo(false);
+            this.combate_Teddiursa1.verFondo(false);
+            this.combate_Teddiursa2.verFondo(false);
+            this.combate_Charmander1.verFondo(false);
+            this.combate_Charmander2.verFondo(false);
         }
 
         private void elegirOshawott1_PointerReleased(object sender, PointerRoutedEventArgs e)
