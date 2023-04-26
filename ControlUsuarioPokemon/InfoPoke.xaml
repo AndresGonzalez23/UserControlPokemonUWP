@@ -10,16 +10,25 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="34*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="257*"/>
+            <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="320*"/>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="331*"/>
+            <ColumnDefinition Width="184*"/>
         </Grid.ColumnDefinitions>
-        
-        <local:cuTeddiursa x:Name="cuTeddiursa" Grid.Row="1" Height="340" Width="310"/>
+
+        <local:cuTeddiursa x:Name="cuTeddiursa" Grid.Row="1" Margin="5,5,5,120" Grid.RowSpan="4"/>
+        <Rectangle x:Name="fnd_Datos" Grid.Column="1" Grid.Row="1" Stroke="Black" Fill="#FFC1C1C1" Opacity="0.5" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="txt_Nombre" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center"  TextWrapping="NoWrap" Text="Nombre: " VerticalAlignment="Center" FontSize="36"/>
+        <TextBlock x:Name="txt_Tipo" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center"  TextWrapping="NoWrap" Text="Tipo: " VerticalAlignment="Center" FontSize="36" Margin="60,0,0,0"/>
+        <TextBlock x:Name="txt_Descripcion" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center"  TextWrapping="NoWrap" Text="Descripción: " VerticalAlignment="Center" FontSize="36" Margin="0,0,50,0"/>
 
 
     </Grid>
