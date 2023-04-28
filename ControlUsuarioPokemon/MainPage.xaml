@@ -18,6 +18,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+
         <Image Grid.RowSpan="4" Grid.ColumnSpan="4" Source="/Assets/PokedexFondo.png" Stretch="UniformToFill"/>
 
         <Button x:Name="btn_DesplegarSplit" Margin="4,0,0,0" Width="34" Background="#FF7E7676" Click="Button_Click">

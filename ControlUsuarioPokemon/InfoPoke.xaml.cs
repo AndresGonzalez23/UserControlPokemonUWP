@@ -25,9 +25,10 @@ namespace ControlUsuarioPokemon
         public InfoPoke()
         {
             this.InitializeComponent();
-            this.cuTeddiursa.verFondo(false);
             this.cuTeddiursa.VerEnergia = false;
             this.cuTeddiursa.VerVida = false;
+            this.cuTeddiursa.verFondo(false);
+            
             this.cuTeddiursa.CambiarVisibilidadBotones();
             this.cuTeddiursa.DesactivarCorrer(false);
             this.cuTeddiursa.DesactivarBrazos(false);

@@ -198,14 +198,7 @@ namespace ControlUsuarioPokemon
             set { this.PEnergia.Value = value; }
         }
 
-        public void verFondo(bool verFondo)
-        {
-            if (!verFondo) { this.imgFondo.Source = null; }
-            else
-            {
-               this.imgFondo.Source = new BitmapImage(new Uri("ms-appx:///Assets/fondoBosque.png"));
-            }
-        }
+        
         private bool verEnergia = true;
         public bool VerEnergia
         {
@@ -229,6 +222,15 @@ namespace ControlUsuarioPokemon
                 if (!verVida) this.gridGeneral.RowDefinitions[0].Height = new GridLength(0);
                 else this.gridGeneral.RowDefinitions[0].Height = new GridLength(10,
                GridUnitType.Star);
+            }
+        }
+
+        public void verFondo(bool verFondo)
+        {
+            if (!verFondo) { this.imgFondo.Source = null; }
+            else
+            {
+                this.imgFondo.Source = new BitmapImage(new Uri("ms-appx:///Assets/fondoBosque.png"));
             }
         }
 
