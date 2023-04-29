@@ -90,6 +90,12 @@ namespace ControlUsuarioPokemon
                 case "InfoPoke":
                     frMain.Navigate(typeof(InfoPoke));
                     break;
+                case "InfoOsha":
+                    frMain.Navigate(typeof(InfoOsha));
+                    break;
+                case "InfoCharmander":
+                    frMain.Navigate(typeof(InfoCharmander));
+                    break;
             }
         }
 

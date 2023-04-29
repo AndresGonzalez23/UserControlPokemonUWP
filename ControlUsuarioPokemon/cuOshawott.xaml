@@ -967,7 +967,7 @@
         </Storyboard>
     </UserControl.Resources>
 
-    <Grid>
+    <Grid x:Name="gridGeneral">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="80*"/>

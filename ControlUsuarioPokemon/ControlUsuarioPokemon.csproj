@@ -131,6 +131,12 @@
     <Compile Include="cuTeddiursa.xaml.cs">
       <DependentUpon>cuTeddiursa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InfoCharmander.xaml.cs">
+      <DependentUpon>InfoCharmander.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoOsha.xaml.cs">
+      <DependentUpon>InfoOsha.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InfoPoke.xaml.cs">
       <DependentUpon>InfoPoke.xaml</DependentUpon>
     </Compile>
@@ -153,7 +159,6 @@
     <Content Include="Assets\fondo_combate.png" />
     <Content Include="Assets\oshawott pokedex.png" />
     <Content Include="Assets\oshawott.png" />
-    <Content Include="Assets\Pokedex.png" />
     <Content Include="Assets\PokedexFondo.png" />
     <Content Include="Assets\teddiursa pokedex.png" />
     <Content Include="Assets\Teddiursa.png" />
@@ -212,6 +217,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="cuTeddiursa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoCharmander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoOsha.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

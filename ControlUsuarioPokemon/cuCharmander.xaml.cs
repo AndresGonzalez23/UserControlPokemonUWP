@@ -183,5 +183,11 @@ namespace ControlUsuarioPokemon
             lastimar();
 
         }
+
+        public void CambiarVisibilidadBotones()
+        {
+            vbBotones.Visibility = Visibility.Collapsed;
+            nombrePokemon.Visibility = Visibility.Collapsed;
+        }
     }
 }

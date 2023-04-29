@@ -16,8 +16,8 @@
         <Viewbox>
             <GridView HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image x:Name="img_Teddiursa" Source="/Assets/Teddiursa.png" Width="300" Margin="10,5,10,5" PointerReleased="img_Teddiursa_PointerReleased"/>
-                <Image Source="/Assets/oshawott.png" Width="300" Margin="10,5,10,5"/>
-                <Image Source="/Assets/charmander.png" Width="300" Margin="10,5,10,5"/>
+                <Image x:Name="img_Oshawott" Source="/Assets/oshawott.png" Width="300" Margin="10,5,10,5" PointerReleased="img_Oshawott_PointerReleased"/>
+                <Image x:Name="img_Charmander" Source="/Assets/charmander.png" Width="300" Margin="10,5,10,5" PointerReleased="img_Charmander_PointerReleased"/>
             </GridView>
         </Viewbox>
 

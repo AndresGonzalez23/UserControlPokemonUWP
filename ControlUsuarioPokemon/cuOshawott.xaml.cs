@@ -63,6 +63,32 @@ namespace ControlUsuarioPokemon
             set { this.pbPower.Value = value; }
         }
 
+        private bool verEnergia = true;
+        public bool VerEnergia
+        {
+            get { return verEnergia; }
+            set
+            {
+                this.verEnergia = value;
+                if (!verEnergia) this.gridGeneral.RowDefinitions[1].Height = new GridLength(0);
+                else this.gridGeneral.RowDefinitions[1].Height = new GridLength(10,
+               GridUnitType.Star);
+            }
+        }
+
+        private bool verVida = true;
+        public bool VerVida
+        {
+            get { return verVida; }
+            set
+            {
+                this.verVida = value;
+                if (!verVida) this.gridGeneral.RowDefinitions[0].Height = new GridLength(0);
+                else this.gridGeneral.RowDefinitions[0].Height = new GridLength(10,
+               GridUnitType.Star);
+            }
+        }
+
         public void verFondo(bool verFondo)
         {
             if (!verFondo) { this.imgFondo.Source = null; }
@@ -184,6 +210,17 @@ namespace ControlUsuarioPokemon
             Storyboard sbher = (Storyboard)this.Resources["Herido"];
             sbher.Begin();
 
+        }
+
+        public void CambiarVisibilidadBotones()
+        {
+            btnAtacar.Visibility = Visibility.Collapsed;
+            btnDescanso.Visibility = Visibility.Collapsed;
+            btnDefensa.Visibility = Visibility.Collapsed;
+            btnEnergia.Visibility = Visibility.Collapsed;
+            btnCansado.Visibility = Visibility.Collapsed;
+            btnHerido.Visibility = Visibility.Collapsed;
+            tbNombre.Visibility = Visibility.Collapsed;
         }
     }
 }

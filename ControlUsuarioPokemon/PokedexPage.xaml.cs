@@ -45,5 +45,14 @@ namespace ControlUsuarioPokemon
             padre = (MainPage)e.Parameter;
         }
 
+        private void img_Charmander_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            padre.irAPagina("InfoCharmander");
+        }
+
+        private void img_Oshawott_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            padre.irAPagina("InfoOsha");
+        }
     }
 }
