@@ -57,7 +57,7 @@ namespace ControlUsuarioPokemon
 
         private void btnInicio_Click(object sender, RoutedEventArgs e)
         {
-            frMain.Navigate(typeof(MainPage), this);
+            frMain.Navigate(typeof(Inicio), this);
         }
 
         private void btnPokedex_Click(object sender, RoutedEventArgs e)
