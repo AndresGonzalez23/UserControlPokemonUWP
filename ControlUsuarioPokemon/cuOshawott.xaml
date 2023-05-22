@@ -996,7 +996,7 @@
             </Image.RenderTransform>
         </Image>
         <TextBlock x:Name="tbNombre" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="OSHAWOTT" VerticalAlignment="Center" FontSize="36" FontWeight="Bold"/>
-        <Canvas x:Name="pokemon" Grid.Column="1" Grid.Row="2" Width="400" Height="293" VerticalAlignment="Bottom" Margin="208,155,211,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center">
+        <Canvas x:Name="pokemon" Grid.Column="1" Grid.Row="2" Width="400" Height="293" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center">
             <Canvas.RenderTransform>
                 <CompositeTransform/>
             </Canvas.RenderTransform>

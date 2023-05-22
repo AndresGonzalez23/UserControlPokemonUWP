@@ -1020,7 +1020,7 @@
         <Image x:Name="imgElixirUsada" Grid.Column="2" Grid.Row="1" Margin="10,10,10,10" Source="Assets/elixir.png" Visibility="Collapsed" Opacity="0.4"/>
         <Rectangle x:Name="fndNombre" Grid.Column="1" HorizontalAlignment="Center" Height="55" Grid.Row="3" Stroke="Black" VerticalAlignment="Center" Width="187" Fill="White" Opacity="0.6" />
         <TextBlock x:Name="txtNombre" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Teddiursa" TextWrapping="Wrap" FontSize="40" Foreground="Black" />
-        <Canvas x:Name="cvTeddiursa" Grid.Column="1" HorizontalAlignment="Center" Height="279" Grid.Row="2" VerticalAlignment="Bottom" Width="286" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="cvTeddiursa" Grid.Column="1" HorizontalAlignment="Center" Height="260" Grid.Row="2" VerticalAlignment="Bottom" Width="286" RenderTransformOrigin="0.5,0.5">
             <Canvas.RenderTransform>
                 <CompositeTransform/>
             </Canvas.RenderTransform>

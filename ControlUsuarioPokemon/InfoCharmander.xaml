@@ -33,12 +33,9 @@
             </Grid.ColumnDefinitions>
 
             <Border x:Name="borderPokemon" BorderBrush="Black" BorderThickness="2" Grid.Column="1" Margin="25,25,25,25">
-                <Border.Background>
-                    <ImageBrush ImageSource="/Assets/bos.png"/>
-                </Border.Background>
-                <StackPanel x:Name="spUserControl" Margin="0,90,0,0">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                     <local:cuCharmander x:Name="cuCharmander" Height="416"/>
-                </StackPanel>
+                </Grid>
             </Border>
 
             <Rectangle Grid.Column="0" Grid.Row="1" Stroke="Black" Fill="Black" Grid.ColumnSpan="3"/>

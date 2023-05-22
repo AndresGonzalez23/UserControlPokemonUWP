@@ -33,12 +33,9 @@
             </Grid.ColumnDefinitions>
 
             <Border x:Name="borderPokemon" BorderBrush="Black" BorderThickness="2" Grid.Column="1" Margin="25,25,25,25">
-                <Border.Background>
-                    <ImageBrush ImageSource="/Assets/fondoBosque.png"/>
-                </Border.Background>
-                <StackPanel x:Name="spUserControl" Margin="0,110,0,0">
-                    <local:cuTeddiursa x:Name="cuTeddiursa"/>
-                </StackPanel>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <local:cuTeddiursa x:Name="cuTeddiursa" HorizontalAlignment="Center" VerticalAlignment="Center" Width="358" Height="242"/>
+                </Grid>
             </Border>
 
             <Rectangle Grid.Column="0" Grid.Row="1" Stroke="Black" Fill="Black" Grid.ColumnSpan="3"/>
