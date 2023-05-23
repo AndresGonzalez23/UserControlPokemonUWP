@@ -33,39 +33,45 @@
             </Grid.ColumnDefinitions>
 
             <Border x:Name="borderPokemon" BorderBrush="Black" BorderThickness="2" Grid.Column="1" Margin="25,25,25,25">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/fondoBosque.png"/>
+                </Border.Background>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <local:cuTeddiursa x:Name="cuTeddiursa" HorizontalAlignment="Center" VerticalAlignment="Center" Width="358" Height="242"/>
+                    <local:cuTeddiursa x:Name="cuTeddiursa" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Grid>
             </Border>
 
             <Rectangle Grid.Column="0" Grid.Row="1" Stroke="Black" Fill="Black" Grid.ColumnSpan="3"/>
-            <Grid Grid.Column="1" Grid.Row="2" Margin="25,25,25,25" BorderBrush="Black" BorderThickness="2" Background="#FF85CDF3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="40*"/>
-                    <ColumnDefinition Width="61*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="20*"/>
-                    <RowDefinition Height="36*"/>
-                    <RowDefinition Height="36*"/>
-                    <RowDefinition Height="35*"/>
-                    <RowDefinition Height="34*"/>
-                    <RowDefinition Height="33*"/>
-                    <RowDefinition Height="57*"/>
-                </Grid.RowDefinitions>
-                <TextBlock x:Name="txt_Nombre" TextWrapping="Wrap" Text="Nombre:" FontSize="30" Grid.Row="1" HorizontalAlignment="Right"/>
-                <TextBlock x:Name="txt_Tipo" TextWrapping="Wrap" Text="Tipo:" FontSize="30" Grid.Row="4" HorizontalAlignment="Right"/>
-                <TextBlock x:Name="txt_Teddiursa" Grid.Column="1" TextWrapping="Wrap" Text="Teddiursa" FontSize="30" Grid.Row="1" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-                <TextBlock x:Name="txt_Normal" Grid.Column="1" TextWrapping="Wrap" Text="Normal" FontSize="30" Grid.Row="4" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-                <TextBlock x:Name="txt_Peso" TextWrapping="Wrap" Text="Peso:" FontSize="30" Grid.Row="5" HorizontalAlignment="Right"/>
-                <TextBlock x:Name="txt_PesoTeddi" TextWrapping="Wrap" Text="8'8 Kg" FontSize="30" Grid.Row="5" HorizontalAlignment="Left" Grid.Column="1" Margin="5,0,0,0"/>
-                <TextBlock x:Name="txt_Habilidad" TextWrapping="Wrap" Text="Habilidad:" FontSize="30" Grid.Row="2" HorizontalAlignment="Right"/>
-                <TextBlock x:Name="txt_Evolucion" TextWrapping="Wrap" Text="Evolución:" FontSize="30" Grid.Row="3" HorizontalAlignment="Right"/>
-                <TextBlock x:Name="txt_Hab" TextWrapping="Wrap" Text="Recogida" FontSize="30" Grid.Row="2" HorizontalAlignment="Left" Grid.Column="1" Margin="5,0,0,0"/>
-                <TextBlock x:Name="txt_Evol" TextWrapping="Wrap" Text="Ursaring" FontSize="30" Grid.Row="3" HorizontalAlignment="Left" Grid.Column="1" Margin="5,0,0,0"/>
 
-
-            </Grid>
+            <Viewbox Grid.Column="1" Grid.Row="2" Margin="15,15,15,15">
+                <Grid Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Background="#FF85CDF3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40*"/>
+                        <ColumnDefinition Width="61*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20*"/>
+                        <RowDefinition Height="36*"/>
+                        <RowDefinition Height="36*"/>
+                        <RowDefinition Height="35*"/>
+                        <RowDefinition Height="34*"/>
+                        <RowDefinition Height="33*"/>
+                        <RowDefinition Height="57*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="txt_Nombre" TextWrapping="Wrap" Text="Nombre:" FontSize="15" Grid.Row="1" HorizontalAlignment="Right" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="txt_Tipo" TextWrapping="Wrap" Text="Tipo:" FontSize="15" Grid.Row="4" HorizontalAlignment="Right" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="txt_Teddiursa" Grid.Column="1" TextWrapping="Wrap" Text="Teddiursa" FontSize="15" Grid.Row="1" HorizontalAlignment="Left" Margin="2,0,5,0"/>
+                    <TextBlock x:Name="txt_Normal" Grid.Column="1" TextWrapping="Wrap" Text="Normal" FontSize="15" Grid.Row="4" HorizontalAlignment="Left" Margin="2,0,5,0"/>
+                    <TextBlock x:Name="txt_Peso" TextWrapping="Wrap" Text="Peso:" FontSize="15" Grid.Row="5" HorizontalAlignment="Right" Margin="5,0,0,2"/>
+                    <TextBlock x:Name="txt_PesoTeddi" TextWrapping="Wrap" Text="8'8 Kg" FontSize="15" Grid.Row="5" HorizontalAlignment="Left" Grid.Column="1" Margin="2,0,5,2"/>
+                    <TextBlock x:Name="txt_Habilidad" TextWrapping="Wrap" Text="Habilidad:" FontSize="15" Grid.Row="2" HorizontalAlignment="Right" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="txt_Evolucion" TextWrapping="Wrap" Text="Evolución:" FontSize="15" Grid.Row="3" HorizontalAlignment="Right" Margin="5,0,0,0"/>
+                    <TextBlock x:Name="txt_Hab" TextWrapping="Wrap" Text="Recogida" FontSize="15" Grid.Row="2" HorizontalAlignment="Left" Grid.Column="1" Margin="2,0,5,0"/>
+                    <TextBlock x:Name="txt_Evol" TextWrapping="Wrap" Text="Ursaring" FontSize="15" Grid.Row="3" HorizontalAlignment="Left" Grid.Column="1" Margin="2,0,5,0"/>
+                </Grid>
+            </Viewbox>
+            
+            
 
 
         </Grid>
