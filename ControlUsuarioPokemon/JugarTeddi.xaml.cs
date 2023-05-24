@@ -20,28 +20,11 @@ namespace ControlUsuarioPokemon
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class InfoOsha : Page
+    public sealed partial class JugarTeddi : Page
     {
-
-        MainPage padre;
-
-        public InfoOsha()
+        public JugarTeddi()
         {
             this.InitializeComponent();
-            this.cuOshawott.VerEnergia = false;
-            this.cuOshawott.VerVida = false;
-            this.cuOshawott.verFondo(false);
-            this.cuOshawott.CambiarVisibilidadBotones();
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            padre = (MainPage)e.Parameter;
-        }
-
-        private void btn_Jugar_Click(object sender, RoutedEventArgs e)
-        {
-            padre.irAPagina("JugarOsha");
         }
     }
 }

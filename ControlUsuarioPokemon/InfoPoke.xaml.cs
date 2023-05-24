@@ -22,6 +22,9 @@ namespace ControlUsuarioPokemon
     /// </summary>
     public sealed partial class InfoPoke : Page
     {
+
+        MainPage padre;
+
         public InfoPoke()
         {
             this.InitializeComponent();
@@ -33,5 +36,16 @@ namespace ControlUsuarioPokemon
             this.cuTeddiursa.DesactivarCorrer(false);
             this.cuTeddiursa.DesactivarBrazos(false);
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            padre = (MainPage)e.Parameter;
+        }
+
+        private void btn_Jugar_Click(object sender, RoutedEventArgs e)
+        {
+            padre.irAPagina("JugarTeddi");
+        }
+
     }
 }

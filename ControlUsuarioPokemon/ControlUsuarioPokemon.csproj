@@ -143,6 +143,15 @@
     <Compile Include="Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JugarCharmander.xaml.cs">
+      <DependentUpon>JugarCharmander.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JugarOsha.xaml.cs">
+      <DependentUpon>JugarOsha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JugarTeddi.xaml.cs">
+      <DependentUpon>JugarTeddi.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -236,6 +245,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Inicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JugarCharmander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JugarOsha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JugarTeddi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

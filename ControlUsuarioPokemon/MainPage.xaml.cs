@@ -88,13 +88,22 @@ namespace ControlUsuarioPokemon
             switch (nombrePagina)
             {
                 case "InfoPoke":
-                    frMain.Navigate(typeof(InfoPoke));
+                    frMain.Navigate(typeof(InfoPoke), this);
                     break;
                 case "InfoOsha":
-                    frMain.Navigate(typeof(InfoOsha));
+                    frMain.Navigate(typeof(InfoOsha), this);
                     break;
                 case "InfoCharmander":
-                    frMain.Navigate(typeof(InfoCharmander));
+                    frMain.Navigate(typeof(InfoCharmander), this);
+                    break;
+                case "JugarCharmander":
+                    frMain.Navigate(typeof(JugarCharmander));
+                    break;
+                case "JugarOsha":
+                    frMain.Navigate(typeof(JugarOsha));
+                    break;
+                case "JugarTeddi":
+                    frMain.Navigate(typeof(JugarTeddi));
                     break;
             }
         }

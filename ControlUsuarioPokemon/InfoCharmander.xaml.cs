@@ -22,6 +22,9 @@ namespace ControlUsuarioPokemon
     /// </summary>
     public sealed partial class InfoCharmander : Page
     {
+
+        MainPage padre;
+
         public InfoCharmander()
         {
             this.InitializeComponent();
@@ -29,6 +32,16 @@ namespace ControlUsuarioPokemon
             this.cuCharmander.VerVida = false;
             this.cuCharmander.verFondo(false);
             this.cuCharmander.CambiarVisibilidadBotones();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            padre = (MainPage)e.Parameter;
+        }
+
+        private void btn_Jugar_Click(object sender, RoutedEventArgs e)
+        {
+            padre.irAPagina("JugarCharmander");
         }
     }
 }
