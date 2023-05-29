@@ -8,6 +8,8 @@
     mc:Ignorable="d"
     Background="Transparent">
 
+
+
     <Grid Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -44,21 +46,19 @@
                     <SymbolIcon Grid.Row="2" Margin="4" Symbol="People" FocusVisualPrimaryBrush="Black" Foreground="Black"></SymbolIcon>
                     <SymbolIcon Grid.Row="3" Margin="4" Symbol="Camera" Foreground="Black" FocusVisualPrimaryBrush="Black"></SymbolIcon>
 
-                    <Button x:Name="btnInicio" Grid.Row="0" Grid.Column="1" Content="Inicio" Background="#333F2525" Click="btnInicio_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                    <Button x:Name="btnInicio" x:Uid="Ini" Grid.Row="0" Grid.Column="1" Content="Inicio" Background="#333F2525" Click="btnInicio_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
                     <Button x:Name="btnPokedex" Grid.Row="1" Grid.Column="1" Content="Pokedex" Background="#333F2525" Click="btnPokedex_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
-                    <Button x:Name="btnCombate" Grid.Row="2" Grid.Column="1" Content="Combate" Background="#333F2525" Click="btnCombate_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
-                    <Button x:Name="btnAcercaDe" Grid.Row="3" Grid.Column="1" Content="Acerca de" Background="#333F2525" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                    <Button x:Name="btnCombate" x:Uid="Comb" Grid.Row="2" Grid.Column="1" Content="Combate" Background="#333F2525" Click="btnCombate_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                    <Button x:Name="btnAcercaDe" x:Uid="Acer" Grid.Row="3" Grid.Column="1" Content="Acerca de" Background="#333F2525" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+
 
                 </Grid>
             </SplitView.Pane>
 
             <Frame x:Name="frMain" Grid.Column="1" Grid.Row="1" Foreground="Black">
-                <Grid>
 
-                </Grid>
             </Frame>
         </SplitView>
-        
-
+      
     </Grid>
 </Page>

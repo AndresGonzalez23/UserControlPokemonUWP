@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
@@ -108,5 +109,21 @@ namespace ControlUsuarioPokemon
             }
         }
 
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+          
+            string lang = "en-US";
+
+            ApplicationLanguages.PrimaryLanguageOverride = lang;
+
+           
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+     
     }
 }
