@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Uwp.Notifications;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +8,8 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Globalization;
 using Windows.UI.Core;
+using Windows.UI.Notifications;
+using Windows.UI.StartScreen;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -32,7 +35,87 @@ namespace ControlUsuarioPokemon
             SystemNavigationManager.GetForCurrentView().BackRequested += opcionVolver;
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(320, 320));
             ApplicationView.GetForCurrentView().VisibleBoundsChanged += MainPage_VisibleBoundsChanged;
+            
+            TileContent content = new TileContent()
+            {
+                Visual = new TileVisual()
+                {
+                    TileMedium = new TileBinding()
+                    {
+                        Content = new TileBindingContentAdaptive()
+                        {
+                            Children =
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = "IPOkemon",
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            },
+                            new AdaptiveText()
+                            {
+                                 Text = "Un proyecto de IPO2",
+                                 HintStyle = AdaptiveTextStyle.CaptionSubtle
+                            },
+                        }
+                        }
+                    },
 
+                    TileWide = new TileBinding()
+                    {
+                        Branding = TileBranding.NameAndLogo,
+                        DisplayName = "Version 1.0",
+
+                        Content = new TileBindingContentAdaptive()
+                        {
+                            Children = {
+                            new AdaptiveText()
+                            {
+                                Text = "IPOkemon",
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = "Un Proyecto de IPO2",
+                                HintStyle = AdaptiveTextStyle.CaptionSubtle
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = "Una aplicación sobre Pokemon hecha con tecnología UWP",
+                                HintWrap = true,
+                            }
+                        }
+                        }
+                    },
+                    TileLarge = new TileBinding()
+                    {
+                        Content = new TileBindingContentAdaptive()
+                        {
+                            Children = {
+                            new AdaptiveText()
+                            {
+                                Text = "IPOkemon",
+                                HintStyle = AdaptiveTextStyle.Subtitle
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = "Un Proyecto de IPO2",
+                                HintStyle = AdaptiveTextStyle.CaptionSubtle
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = "Una aplicación sobre Pokemon hecha con tecnología UWP",
+                                HintStyle = AdaptiveTextStyle.CaptionSubtle
+                            }
+                        }
+                        }
+                    },
+                }
+            };
+            var notification = new TileNotification(content.GetXml());
+            notification.ExpirationTime = DateTimeOffset.UtcNow.AddSeconds(10);
+            var updater = TileUpdateManager.CreateTileUpdaterForApplication();
+            updater.Update(notification);
+ 
         }
 
         private void MainPage_VisibleBoundsChanged(ApplicationView sender, object args)
@@ -54,6 +137,58 @@ namespace ControlUsuarioPokemon
                 sView.IsPaneOpen = false;
             }
 
+        }
+
+        public void NotificacionSubida(object sender, PointerRoutedEventArgs e)
+        {
+            new ToastContentBuilder()
+            .AddArgument("action", "Favoritos")
+            .AddArgument("conversationId", 9813)
+            .AddText("Tu Teddiursa esta disponible")
+            .AddText("Puedes ver más información en IPOkemon")
+            .AddInlineImage(new Uri("ms-appx:///Assets/Teddiursa.png"))
+            .AddAppLogoOverride(new Uri("ms-appx:///Assets/caraTeddi.png"),
+            ToastGenericAppLogoCrop.Circle)
+            .Show();
+
+        }
+
+        public void NotificacionOsha(object sender, PointerRoutedEventArgs e)
+        {
+            new ToastContentBuilder()
+            .AddArgument("action", "Favoritos")
+            .AddArgument("conversationId", 9813)
+            .AddText("Tu Oshawott esta disponible")
+            .AddText("Puedes ver más información en IPOkemon")
+            .AddInlineImage(new Uri("ms-appx:///Assets/oshawott.png"))
+            .AddAppLogoOverride(new Uri("ms-appx:///Assets/caraOsha.png"),
+            ToastGenericAppLogoCrop.Circle)
+            .Show();
+
+        }
+
+        public void NotificacionCharm(object sender, PointerRoutedEventArgs e)
+        {
+            new ToastContentBuilder()
+            .AddArgument("action", "Favoritos")
+            .AddArgument("conversationId", 9813)
+            .AddText("Tu Charmander esta disponible")
+            .AddText("Puedes ver más información en IPOkemon")
+            .AddInlineImage(new Uri("ms-appx:///Assets/charmander.png"))
+            .AddAppLogoOverride(new Uri("ms-appx:///Assets/caraCharm.png"),
+            ToastGenericAppLogoCrop.Circle)
+            .Show();
+
+        }
+
+        private async void pinTeddiursa(object sender, PointerRoutedEventArgs e)
+        {
+            SecondaryTile myTile = new SecondaryTile("Favorito", "Dos", "Tres",
+            new Uri("ms-appx:///Assets/IconoPokemon.jpg"),
+            Windows.UI.StartScreen.TileSize.Square150x150);
+            myTile.DisplayName = "IPokemon";
+            myTile.VisualElements.ShowNameOnSquare150x150Logo = true;
+            await myTile.RequestCreateAsync();
         }
 
         private void btnInicio_Click(object sender, RoutedEventArgs e)

@@ -172,9 +172,13 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\caraCharm.png" />
+    <Content Include="Assets\caraOsha.png" />
+    <Content Include="Assets\caraTeddi.png" />
     <Content Include="Assets\charmander pokedex.png" />
     <Content Include="Assets\charmander.png" />
     <Content Include="Assets\fondo_combate.png" />
+    <Content Include="Assets\IconoPokemon.jpg" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -322,6 +326,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.1.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

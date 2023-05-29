@@ -45,6 +45,7 @@ namespace ControlUsuarioPokemon
         private void btn_Jugar_Click(object sender, RoutedEventArgs e)
         {
             padre.irAPagina("JugarTeddi");
+            padre.NotificacionSubida(null, null);
         }
 
     }

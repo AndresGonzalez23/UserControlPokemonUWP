@@ -42,6 +42,7 @@ namespace ControlUsuarioPokemon
         private void btn_Jugar_Click(object sender, RoutedEventArgs e)
         {
             padre.irAPagina("JugarOsha");
+            padre.NotificacionOsha(null, null);
         }
     }
 }
