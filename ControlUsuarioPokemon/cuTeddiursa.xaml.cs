@@ -264,5 +264,31 @@ namespace ControlUsuarioPokemon
             }
         }
 
+        public void Ataque()
+        {
+            Storyboard sb = (Storyboard)this.Resources["Mordisco"];
+            sb.Begin();
+        }
+        public void Ataque2()
+        {
+            Storyboard sb = (Storyboard)this.Resources["Mordisco2"];
+            sb.Begin();
+        }
+
+        public void Defensa()
+        {
+            if (usarEnergia(costeProteccion))
+            {
+                Storyboard sb = (Storyboard)this.Resources["Protección"];
+                sb.Begin();
+            }
+        }
+
+        public void Debil()
+        {
+            Storyboard sb = (Storyboard)this.Resources["Cansancio"];
+            sb.Begin();
+        }
+
     }
 }

@@ -838,7 +838,7 @@
                 <EasingDoubleKeyFrame KeyTime="00:00:05.8000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Name="Atacar">
+        <Storyboard x:Name="Atacar1">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="BrazoDerecho" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-231.691"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="-209.227"/>
@@ -935,6 +935,8 @@
                 <EasingColorKeyFrame KeyTime="00:00:03.6000000" Value="#FFFDFBFB"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
+        
+        
         <Storyboard x:Name="PocionRoja">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="imRPotion" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
@@ -981,16 +983,16 @@
         </Grid.RowDefinitions>
         <Image x:Name="imgFondo" HorizontalAlignment="Center" VerticalAlignment="Center" Source="/Assets/playa.png" Stretch="Fill" Grid.RowSpan="4" Grid.ColumnSpan="3" Height="990" Width="1490" RenderTransformOrigin="0.491,0.472" FocusVisualPrimaryBrush="White"/>
 
-        <ProgressBar x:Name="pbHealth" Grid.Column="1" HorizontalAlignment="Center" Width="1200" Height="96" Margin="2,2,2,2" Background="#66FF0000" BorderBrush="#FFFF0606" Foreground="Red" FocusVisualPrimaryBrush="Red" Value="80"/>
-        <ProgressBar x:Name="pbPower" Grid.Column="1" HorizontalAlignment="Center" Height="100" Width="1200" Grid.Row="1" Value="60" Background="#66F1FF00" Foreground="#FFE6FF00"/>
-        <Image x:Name="imCorazon" Source="Assets/Corazón.svg.png"/>
-        <Image x:Name="imRayo" Source="Assets/rayo.png" Margin="5,5,7,0" Grid.Row="1"/>
-        <Image x:Name="imRPotion" Source="Assets/pocima_roja.png" Grid.Column="2" PointerReleased="usePotionRed" RenderTransformOrigin="0.5,0.5">
+        <ProgressBar x:Name="pbHealth" Grid.Column="1" HorizontalAlignment="Center" Width="1200" Height="96" Margin="2,2,2,2" Background="#66FF0000" BorderBrush="#FFFF0606" Foreground="Red" FocusVisualPrimaryBrush="Red" Value="100"/>
+        <ProgressBar x:Name="pbPower" Grid.Column="1" HorizontalAlignment="Center" Height="100" Width="1200" Grid.Row="1" Value="100" Background="#66F1FF00" Foreground="#FFE6FF00"/>
+        <Image x:Name="imCorazon" Source="Assets/corazon.png"/>
+        <Image x:Name="imRayo" Source="Assets/energia.png" Margin="5,5,7,0" Grid.Row="1"/>
+        <Image x:Name="imRPotion" Source="Assets/pocion.png" Grid.Column="2" PointerReleased="usePotionRed" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <CompositeTransform/>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="imYPotion" Source="Assets/pocima_amarilla.png" Grid.Column="2" Margin="0,5,0,0" Grid.Row="1" PointerReleased="usePotionYellow" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="imYPotion" Source="Assets/elixir.png" Grid.Column="2" Margin="0,5,0,0" Grid.Row="1" PointerReleased="usePotionYellow" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <CompositeTransform/>
             </Image.RenderTransform>

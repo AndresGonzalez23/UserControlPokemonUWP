@@ -129,7 +129,7 @@ namespace ControlUsuarioPokemon
 
         private void btnAtacar_Click(object sender, RoutedEventArgs e)
         {
-            Storyboard sbat = (Storyboard)this.Resources["Atacar"];
+            Storyboard sbat = (Storyboard)this.Resources["Atacar1"];
 
             Storyboard sbPocionAmarilla = (Storyboard)this.Resources["PocionAmarilla"];
 
@@ -222,5 +222,45 @@ namespace ControlUsuarioPokemon
             btnHerido.Visibility = Visibility.Collapsed;
             tbNombre.Visibility = Visibility.Collapsed;
         }
+
+        public void Ataque()
+        {
+            Storyboard sbat = (Storyboard)this.Resources["Atacar1"];
+            Storyboard sbPocionAmarilla = (Storyboard)this.Resources["PocionAmarilla"];
+
+            if (pbPower.Value >= 30)
+            {
+                sbat.Begin();
+
+                pbPower.Value -= 10.0;
+
+            }
+            else
+            {
+
+                sbPocionAmarilla.Begin();
+            }
+        }
+        
+
+        public void Defensa()
+        {
+            Storyboard sbdef = (Storyboard)this.Resources["Defender"];
+            Storyboard sbPocionAmarilla = (Storyboard)this.Resources["PocionAmarilla"];
+
+            if (pbPower.Value >= 30)
+            {
+                sbdef.Begin();
+
+                pbPower.Value -= 5.0;
+            }
+
+        }
+
+        public void Debil() 
+        {
+            Storyboard sbher = (Storyboard)this.Resources["Herido"];
+            sbher.Begin();
+        } 
     }
 }

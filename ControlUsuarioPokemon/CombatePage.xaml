@@ -10,8 +10,8 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="311*"/>
-            <ColumnDefinition Width="329*"/>
+            <ColumnDefinition Width="253*"/>
+            <ColumnDefinition Width="259*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="128*"/>
@@ -19,8 +19,9 @@
             <RowDefinition Height="829*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="imgFondo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="/Assets/fondo_combate.png" Grid.ColumnSpan="2" Margin="0,0,0,0" Stretch="Fill" Grid.Row="2"/>
-        <Image x:Name="elegirTeddiursa1" Source="/Assets/teddiursa pokedex.png" Grid.ColumnSpan="2" Margin="262,0,509,0" PointerReleased="elegirTeddiursa1_PointerReleased" />
+        <Image x:Name="imgFondo" Source="/Assets/fondo_combate.png" Grid.ColumnSpan="2" Stretch="Fill" Grid.Row="2"/>
+
+        <Image x:Name="elegirTeddiursa1" Source="/Assets/teddiursa pokedex.png" Margin="262,0,2,0" PointerReleased="elegirTeddiursa1_PointerReleased" />
         <Image x:Name="elegirTeddiursa2" Source="/Assets/teddiursa pokedex.png" Margin="183,0,-141,0" Grid.Column="1" PointerReleased="elegirTeddiursa2_PointerReleased" />
         <Image x:Name="elegirOshawott1" Source="/Assets/oshawott pokedex.png" Margin="-154,0,154,0" PointerReleased="elegirOshawott1_PointerReleased" />
         <Image x:Name="elegirOshawott2" Source="/Assets/oshawott pokedex.png" Margin="456,0,315,4" Grid.ColumnSpan="2" PointerReleased="elegirOshawott2_PointerReleased" />
@@ -28,10 +29,27 @@
         <Image x:Name="elegirCharmander2" Source="/Assets/charmander pokedex.png" Margin="136,0,137,0" PointerReleased="elegirCharmander2_PointerReleased" Grid.Column="1" />
         <local:cuOshawott x:Name="combate_Oshawott1" Grid.Row="2" Height="453" HorizontalAlignment="Center" VerticalAlignment="Top" Width="430" Margin="0,20,0,0" Visibility="Collapsed"/>
         <local:cuOshawott x:Name="combate_Oshawott2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="457" Width="443" Margin="0,19,0,0" Grid.Column="1" Visibility="Collapsed"/>
-        <local:cuTeddiursa x:Name="combate_Teddiursa1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="453" Width="453" Visibility="Collapsed"/>
-        <local:cuTeddiursa x:Name="combate_Teddiursa2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="453" Width="449" Grid.Column="1" Visibility="Collapsed"/>
-        <local:cuCharmander x:Name="combate_Charmander1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="498" Width="476" Visibility="Collapsed"/>
-        <local:cuCharmander x:Name="combate_Charmander2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="500" Width="478" Grid.Column="1" Visibility="Collapsed"/>
+        <local:cuTeddiursa x:Name="combate_Teddiursa1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="457" Width="453" Margin="0,19,0,0" Visibility="Collapsed"/>
+        <local:cuTeddiursa x:Name="combate_Teddiursa2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="453" Width="449" Grid.Column="1" Margin="0,20,0,0" Visibility="Collapsed"/>
+        <local:cuCharmander x:Name="combate_Charmander1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="457" Width="450" Margin="0,19,0,0" Visibility="Collapsed"/>
+        <local:cuCharmander x:Name="combate_Charmander2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="453" Width="432" Grid.Column="1" Margin="0,20,0,0" Visibility="Collapsed"/>
+        <Button x:Name="btnDefensaOshawott1" Content="DEFENSA" Margin="284,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7F0004FF" Visibility="Collapsed" Click="btnDefensaOshawott1_Click"/>
+        <Button x:Name="btnDefensaTeddiursa1" Content="DEFENSA" Margin="284,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7F0004FF" Visibility="Collapsed" Click="btnDefensaTeddiursa1_Click"/>
+        <Button x:Name="btnDefensaCharmander1" Content="DEFENSA" Margin="284,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7F0004FF" Visibility="Collapsed" Click="btnDefensaCharmander1_Click"/>
+        <Button x:Name="btnAtaqueOshawott1" Content="ATAQUE" Margin="111,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7FFF0000" Visibility="Collapsed" Click="btnAtaqueOshawott1_Click"/>
+        <Button x:Name="btnAtaqueTeddiursa1" Content="ATAQUE" Margin="111,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7FFF0000" Visibility="Collapsed" Click="btnAtaqueTeddiursa1_Click"/>
+        <Button x:Name="btnAtaqueCharmander1" Content="ATAQUE" Margin="111,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7FFF0000" Visibility="Collapsed" Click="btnAtaqueCharmander1_Click"/>
+        <Button x:Name="btnAtaqueOshawott2" Content="ATAQUE" Margin="149,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7FFF0000" Grid.Column="1" Visibility="Collapsed" Click="btnAtaqueOshawott2_Click"/>
+        <Button x:Name="btnAtaqueTeddiursa2" Content="ATAQUE" Margin="149,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7FFF0000" Grid.Column="1" Visibility="Collapsed" Click="btnAtaqueTeddiursa2_Click"/>
+        <Button x:Name="btnAtaqueCharmander2" Content="ATAQUE" Margin="149,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7FFF0000" Grid.Column="1" Visibility="Collapsed" Click="btnAtaqueCharmander2_Click"/>
+        <Button x:Name="btnDefensaOshawott2" Content="DEFENSA" Margin="317,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7F0004FF" Grid.Column="1" Visibility="Collapsed" Click="btnDefensaOshawott2_Click"/>
+        <Button x:Name="btnDefensaTeddiursa2" Content="DEFENSA" Margin="317,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7F0004FF" Grid.Column="1" Visibility="Collapsed" Click="btnDefensaTeddiursa2_Click"/>
+        <Button x:Name="btnDefensaCharmander2" Content="DEFENSA" Margin="317,474,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="138" FontSize="22" FontWeight="Bold" Background="#7F0004FF" Grid.Column="1" Visibility="Collapsed" Click="btnDefensaCharmander2_Click"/>
+        <TextBlock x:Name="tbJugador1" HorizontalAlignment="Left" Margin="144,79,0,0" TextWrapping="Wrap" Text="JUGADOR 1" VerticalAlignment="Top" Height="26" Width="202" FocusVisualPrimaryBrush="White" FocusVisualSecondaryBrush="#99FFFFFF" Foreground="White" FontSize="24" TextAlignment="Center" FontWeight="Bold" Grid.RowSpan="2"/>
+        <TextBlock x:Name="tbJugador2" HorizontalAlignment="Center" Margin="0,79,0,0" TextWrapping="Wrap" Text="JUGADOR 2" VerticalAlignment="Top" Height="26" Width="202" FocusVisualPrimaryBrush="White" FocusVisualSecondaryBrush="#99FFFFFF" Foreground="White" FontSize="24" TextAlignment="Center" FontWeight="Bold" Grid.RowSpan="2" Grid.Column="1"/>
+        <TextBlock x:Name="tbGanador1" HorizontalAlignment="Left" Margin="168,170,0,0" TextWrapping="Wrap" Text="¡EL JUGADOR 1 GANA EL COMBATE!" VerticalAlignment="Top" FontSize="72" Grid.ColumnSpan="2" Height="214" Width="722" TextAlignment="Center" Foreground="Lime" FontWeight="Bold" Grid.Row="2" Visibility="Collapsed"/>
+        <TextBlock x:Name="tbGanador2" HorizontalAlignment="Left" Margin="168,170,0,0" TextWrapping="Wrap" Text="¡EL JUGADOR 2 GANA EL COMBATE!" VerticalAlignment="Top" FontSize="72" Grid.ColumnSpan="2" Height="214" Width="722" TextAlignment="Center" Foreground="Lime" FontWeight="Bold" Grid.Row="2" Visibility="Collapsed"/>
+
     </Grid>
 
 </Page>

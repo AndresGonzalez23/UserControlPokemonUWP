@@ -422,12 +422,12 @@
         <Image x:Name="imFondo" HorizontalAlignment="Center" VerticalAlignment="Center"
         Grid.RowSpan="4" Source="/Assets/bos.png" Grid.ColumnSpan="3" Stretch="Fill" RenderTransformOrigin="0.5,0.605"/>
 
-        <Image x:Name="imagenRayo" Grid.Column="0" HorizontalAlignment="Center" Height="Auto" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Source="/Assets/RayoEnergia.png" NineGrid="5,5,5,5"/>
-        <Image x:Name="imagenCorazon" Grid.Column="0" HorizontalAlignment="Center" Height="Auto" Grid.Row="0" VerticalAlignment="Center" Width="Auto" Source="/Assets/CorazonLaura.png" NineGrid="5,5,5,5"/>
-        <ProgressBar x:Name="barraSalud" HorizontalAlignment="Center" Value="60" Background="#33FF0000" Foreground="#FFB80000" Grid.Column="1" Grid.Row="0" Margin="5,5,5,5" Width="1500" Height="90"/>
-        <ProgressBar x:Name="barraEnergia" HorizontalAlignment="Center" Value="70" Background="#33FFF500" Foreground="#FFD4C819" Grid.Column="1" Grid.Row="1" Margin="5,5,5,5" Width="1500" Height="90"/>
-        <Image x:Name="imagenPocionE" Grid.Column="2" HorizontalAlignment="Center" Height="Auto" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Source="/Assets/Pocion_EnergiaLaura.png" NineGrid="5,5,5,5"/>
-        <Image x:Name="imagenPocionS" Grid.Column="2" HorizontalAlignment="Center" Height="Auto" Grid.Row="0" VerticalAlignment="Center" Width="Auto" Source="/Assets/Pocion_SaludLaura.png" NineGrid="5,5,5,5" PointerReleased="usePotionRed"/>
+        <Image x:Name="imagenRayo" Grid.Column="0" HorizontalAlignment="Center" Height="Auto" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Source="/Assets/energia.png" NineGrid="5,5,5,5"/>
+        <Image x:Name="imagenCorazon" Grid.Column="0" HorizontalAlignment="Center" Height="Auto" Grid.Row="0" VerticalAlignment="Center" Width="Auto" Source="/Assets/corazon.png" NineGrid="5,5,5,5"/>
+        <ProgressBar x:Name="barraSalud" HorizontalAlignment="Center" Value="100" Background="#33FF0000" Foreground="#FFB80000" Grid.Column="1" Grid.Row="0" Margin="5,5,5,5" Width="1500" Height="90"/>
+        <ProgressBar x:Name="barraEnergia" HorizontalAlignment="Center" Value="100" Background="#33FFF500" Foreground="#FFD4C819" Grid.Column="1" Grid.Row="1" Margin="5,5,5,5" Width="1500" Height="90"/>
+        <Image x:Name="imagenPocionE" Grid.Column="2" HorizontalAlignment="Center" Height="Auto" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Source="/Assets/elixir.png" NineGrid="5,5,5,5"/>
+        <Image x:Name="imagenPocionS" Grid.Column="2" HorizontalAlignment="Center" Height="Auto" Grid.Row="0" VerticalAlignment="Center" Width="Auto" Source="/Assets/pocion.png" NineGrid="5,5,5,5" PointerReleased="usePotionRed"/>
 
         <TextBox x:Name="nombrePokemon" Grid.Column="1" HorizontalAlignment="Center" Height="30" Grid.Row="3" TextWrapping="Wrap" Text="CHARMANDER" VerticalAlignment="Center" Width="100" FontSize="10" FontWeight="Bold" TextChanged="nombrePokemon_TextChanged"/>
         <Viewbox x:Name="viewbox" Grid.Column="1" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Stretch="Uniform">

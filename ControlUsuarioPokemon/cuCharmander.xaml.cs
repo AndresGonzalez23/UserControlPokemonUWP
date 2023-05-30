@@ -189,5 +189,25 @@ namespace ControlUsuarioPokemon
             vbBotones.Visibility = Visibility.Collapsed;
             nombrePokemon.Visibility = Visibility.Collapsed;
         }
+
+        public void Ataque()
+        {
+            Storyboard sb = (Storyboard)this.Resources["Ataque1"];
+            sb.Begin();
+            this.barraEnergia.Value -= 10;
+        }
+       
+
+        public void Defensa()
+        {
+            Storyboard sb = (Storyboard)this.Resources["Protegerse"];
+            sb.Begin();
+        }
+
+        public void Debil()
+        {
+            Storyboard sb = (Storyboard)this.Resources["Herido"];
+            sb.Begin();
+        }
     }
 }
