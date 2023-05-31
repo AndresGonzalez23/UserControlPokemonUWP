@@ -76,6 +76,7 @@ namespace ControlUsuarioPokemon
 
         private void elegirOshawott1_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
+            this.combate_Oshawott1.Vida = 100;
             this.combate_Oshawott1.Visibility = Visibility.Visible;
             btnAtaqueOshawott1.Visibility= Visibility.Visible;
             btnDefensaOshawott1.Visibility= Visibility.Visible;
@@ -91,6 +92,7 @@ namespace ControlUsuarioPokemon
 
         private void elegirCharmander1_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
+            this.combate_Charmander1.Vida= 100;
             this.combate_Charmander1.Visibility = Visibility.Visible;
             btnAtaqueCharmander1.Visibility= Visibility.Visible;
             btnDefensaCharmander1.Visibility= Visibility.Visible;
@@ -104,6 +106,7 @@ namespace ControlUsuarioPokemon
 
         private void elegirTeddiursa1_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
+            this.combate_Teddiursa1.Vida = 100;
             this.combate_Teddiursa1.Visibility = Visibility.Visible;
             btnAtaqueTeddiursa1.Visibility= Visibility.Visible;
             btnDefensaTeddiursa1.Visibility= Visibility.Visible;
@@ -118,6 +121,7 @@ namespace ControlUsuarioPokemon
 
         private void elegirOshawott2_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
+            this.combate_Oshawott2.Vida = 100;
             this.combate_Oshawott2.Visibility = Visibility.Visible;
             btnAtaqueOshawott2.Visibility= Visibility.Visible;
             btnDefensaOshawott2.Visibility= Visibility.Visible;
@@ -134,6 +138,7 @@ namespace ControlUsuarioPokemon
 
         private void elegirCharmander2_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
+            this.combate_Charmander2.Vida = 100;
             this.combate_Charmander2.Visibility = Visibility.Visible;
             btnAtaqueCharmander2.Visibility= Visibility.Visible;
             btnDefensaCharmander2.Visibility= Visibility.Visible;
@@ -340,6 +345,7 @@ namespace ControlUsuarioPokemon
 
         private void elegirTeddiursa2_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
+            this.combate_Teddiursa2.Vida = 100;
             this.combate_Teddiursa2.Visibility = Visibility.Visible;
             btnAtaqueTeddiursa2.Visibility= Visibility.Visible;
             btnDefensaTeddiursa2.Visibility= Visibility.Visible;

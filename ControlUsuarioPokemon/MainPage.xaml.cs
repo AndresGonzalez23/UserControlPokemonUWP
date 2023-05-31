@@ -241,6 +241,10 @@ namespace ControlUsuarioPokemon
                 case "JugarTeddi":
                     frMain.Navigate(typeof(JugarTeddi));
                     break;
+                case "AcercaDe":
+                    frMain.Navigate(typeof(AcercaDe));
+                    break;
+
             }
         }
 
@@ -259,6 +263,14 @@ namespace ControlUsuarioPokemon
 
         }
 
-     
+        private void SymbolIcon_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            frMain.Navigate(typeof(Inicio), this);
+        }
+
+        private void btnAcercaDe_Click(object sender, RoutedEventArgs e)
+        {
+            frMain.Navigate(typeof(AcercaDe), this);
+        }
     }
 }
