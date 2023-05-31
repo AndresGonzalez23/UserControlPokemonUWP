@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Uwp.Notifications;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -82,6 +83,8 @@ namespace ControlUsuarioPokemon
             this.elegirTeddiursa1.Opacity = 0.5;
             elegirCharmander1.PointerReleased -= elegirCharmander1_PointerReleased;
             elegirTeddiursa1.PointerReleased -= elegirTeddiursa1_PointerReleased;
+            tbGanador2.Visibility = Visibility.Collapsed;
+            tbGanador1.Visibility = Visibility.Collapsed;
         }
 
         
@@ -95,6 +98,8 @@ namespace ControlUsuarioPokemon
             this.elegirTeddiursa1.Opacity = 0.5;
             elegirOshawott1.PointerReleased -= elegirOshawott1_PointerReleased;
             elegirTeddiursa1.PointerReleased -= elegirTeddiursa1_PointerReleased;
+            tbGanador2.Visibility = Visibility.Collapsed;
+            tbGanador1.Visibility = Visibility.Collapsed;
         }
 
         private void elegirTeddiursa1_PointerReleased(object sender, PointerRoutedEventArgs e)
@@ -105,8 +110,9 @@ namespace ControlUsuarioPokemon
             this.elegirCharmander1.Opacity = 0.5;
             this.elegirOshawott1.Opacity = 0.5;
             elegirCharmander1.PointerReleased -= elegirCharmander1_PointerReleased;
-            elegirOshawott1.PointerReleased -= elegirTeddiursa1_PointerReleased;
-
+            elegirOshawott1.PointerReleased -= elegirOshawott1_PointerReleased;
+            tbGanador2.Visibility = Visibility.Collapsed;
+            tbGanador1.Visibility = Visibility.Collapsed;
 
         }
 
@@ -119,7 +125,8 @@ namespace ControlUsuarioPokemon
             this.elegirTeddiursa2.Opacity = 0.5;
             elegirCharmander2.PointerReleased -= elegirCharmander2_PointerReleased;
             elegirTeddiursa2.PointerReleased -= elegirTeddiursa2_PointerReleased;
-
+            tbGanador2.Visibility = Visibility.Collapsed;
+            tbGanador1.Visibility = Visibility.Collapsed;
 
 
 
@@ -134,7 +141,8 @@ namespace ControlUsuarioPokemon
             this.elegirTeddiursa2.Opacity = 0.5;
             elegirOshawott2.PointerReleased -= elegirOshawott2_PointerReleased;
             elegirTeddiursa2.PointerReleased -= elegirTeddiursa2_PointerReleased;
-
+            tbGanador2.Visibility = Visibility.Collapsed;
+            tbGanador1.Visibility = Visibility.Collapsed;
 
         }
 
@@ -160,8 +168,6 @@ namespace ControlUsuarioPokemon
         {
             this.combate_Oshawott1.Ataque();
             
-            
-
             if (this.combate_Teddiursa2.Visibility == Visibility.Visible)
             {
                 this.combate_Teddiursa2.Vida -= 25;
@@ -341,8 +347,8 @@ namespace ControlUsuarioPokemon
             this.elegirOshawott2.Opacity = 0.5;
             elegirCharmander2.PointerReleased -= elegirCharmander2_PointerReleased;
             elegirOshawott2.PointerReleased -= elegirOshawott2_PointerReleased;
-
-
+            tbGanador2.Visibility = Visibility.Collapsed;
+            tbGanador1.Visibility = Visibility.Collapsed;
 
         }
 
@@ -352,6 +358,48 @@ namespace ControlUsuarioPokemon
             if (vida == 0)
             {
                 tbGanador1.Visibility = Visibility.Visible;
+                new ToastContentBuilder()
+                .AddArgument("action", "Favoritos")
+                .AddArgument("conversationId", 9813)
+                .AddText("El ganador es el Jugador 1")
+                .AddText("Puedes ver más información en IPOkemon")
+                .Show();
+                this.combate_Charmander1.Visibility = Visibility.Collapsed;
+                this.combate_Charmander2.Visibility = Visibility.Collapsed;
+                this.combate_Teddiursa1.Visibility = Visibility.Collapsed;
+                this.combate_Teddiursa2.Visibility = Visibility.Collapsed;
+                this.combate_Oshawott1.Visibility = Visibility.Collapsed;
+                this.combate_Oshawott2.Visibility = Visibility.Collapsed;
+                elegirOshawott2.PointerReleased += elegirOshawott2_PointerReleased;
+                elegirTeddiursa2.PointerReleased += elegirTeddiursa2_PointerReleased;
+                elegirCharmander2.PointerReleased += elegirCharmander2_PointerReleased;
+
+                elegirCharmander1.PointerReleased += elegirCharmander1_PointerReleased;
+                elegirOshawott1.PointerReleased += elegirOshawott1_PointerReleased;
+                elegirTeddiursa1.PointerReleased += elegirTeddiursa1_PointerReleased;
+
+                btnAtaqueOshawott1.Visibility = Visibility.Collapsed;
+                btnDefensaOshawott1.Visibility = Visibility.Collapsed;
+                btnAtaqueCharmander1.Visibility = Visibility.Collapsed;
+                btnDefensaCharmander1.Visibility = Visibility.Collapsed;
+                btnAtaqueTeddiursa1.Visibility = Visibility.Collapsed;
+                btnDefensaTeddiursa1.Visibility = Visibility.Collapsed;
+
+
+                btnAtaqueOshawott2.Visibility = Visibility.Collapsed;
+                btnDefensaOshawott2.Visibility = Visibility.Collapsed;
+                btnAtaqueCharmander2.Visibility = Visibility.Collapsed;
+                btnDefensaCharmander2.Visibility = Visibility.Collapsed;
+                btnAtaqueTeddiursa2.Visibility = Visibility.Collapsed;
+                btnDefensaTeddiursa2.Visibility = Visibility.Collapsed;
+
+                this.elegirCharmander1.Opacity = 1;
+                this.elegirTeddiursa1.Opacity = 1;
+                this.elegirOshawott1.Opacity = 1;
+
+                this.elegirCharmander2.Opacity = 1;
+                this.elegirTeddiursa2.Opacity = 1;
+                this.elegirOshawott2.Opacity = 1;
             }
         }
 
@@ -361,6 +409,47 @@ namespace ControlUsuarioPokemon
             if (vida == 0)
             {
                 tbGanador2.Visibility = Visibility.Visible;
+                new ToastContentBuilder()
+                .AddArgument("action", "Favoritos")
+                .AddArgument("conversationId", 9813)
+                .AddText("El ganador es el Jugador 2")
+                .AddText("Puedes ver más información en IPOkemon")
+                .Show();
+                this.combate_Charmander1.Visibility = Visibility.Collapsed;
+                this.combate_Charmander2.Visibility = Visibility.Collapsed;
+                this.combate_Teddiursa1.Visibility = Visibility.Collapsed;
+                this.combate_Teddiursa2.Visibility = Visibility.Collapsed;
+                this.combate_Oshawott1.Visibility = Visibility.Collapsed;
+                this.combate_Oshawott2.Visibility = Visibility.Collapsed;
+                elegirOshawott2.PointerReleased += elegirOshawott2_PointerReleased;
+                elegirTeddiursa2.PointerReleased += elegirTeddiursa2_PointerReleased;
+                elegirCharmander2.PointerReleased += elegirCharmander2_PointerReleased;
+
+                elegirCharmander1.PointerReleased += elegirCharmander1_PointerReleased;
+                elegirOshawott1.PointerReleased += elegirOshawott1_PointerReleased;
+                elegirTeddiursa1.PointerReleased += elegirTeddiursa1_PointerReleased;
+
+                btnAtaqueOshawott1.Visibility = Visibility.Collapsed;
+                btnDefensaOshawott1.Visibility = Visibility.Collapsed;
+                btnAtaqueCharmander1.Visibility = Visibility.Collapsed;
+                btnDefensaCharmander1.Visibility = Visibility.Collapsed;
+                btnAtaqueTeddiursa1.Visibility = Visibility.Collapsed;
+                btnDefensaTeddiursa1.Visibility = Visibility.Collapsed;
+
+                btnAtaqueOshawott2.Visibility = Visibility.Collapsed;
+                btnDefensaOshawott2.Visibility = Visibility.Collapsed;
+                btnAtaqueCharmander2.Visibility = Visibility.Collapsed;
+                btnDefensaCharmander2.Visibility = Visibility.Collapsed;
+                btnAtaqueTeddiursa2.Visibility = Visibility.Collapsed;
+                btnDefensaTeddiursa2.Visibility = Visibility.Collapsed;
+
+                this.elegirCharmander1.Opacity = 1;
+                this.elegirTeddiursa1.Opacity = 1;
+                this.elegirOshawott1.Opacity = 1;
+
+                this.elegirCharmander2.Opacity = 1;
+                this.elegirTeddiursa2.Opacity = 1;
+                this.elegirOshawott2.Opacity = 1;
             }
         }
 
